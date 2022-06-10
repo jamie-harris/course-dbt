@@ -56,7 +56,7 @@ select * from order_counts
 ## On average, how many unique sessions do we have per hour?
 ### 16.3 sessions
 ```
-{
+
 with hourly_counts as (
 SELECT DATE_TRUNC('hour', created_at_utc) AS hour
 , COUNT(DISTINCT session_id) as session_count
@@ -67,6 +67,5 @@ SELECT DATE_TRUNC('hour', created_at_utc) AS hour
 SELECT AVG(session_count)
 FROM hourly_counts
 
-}
 
 ```
