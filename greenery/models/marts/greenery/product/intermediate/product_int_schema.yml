@@ -1,5 +1,5 @@
 version: 2
 
 models:
-  - name: int_session_detail.sql
+  - name: int_session_detail
     description: Provides a record of session outcomes in usable aggregate.

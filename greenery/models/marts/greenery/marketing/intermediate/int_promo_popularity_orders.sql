@@ -37,7 +37,7 @@ select order_guid
     , promo_status
     , overall_promo_usage
     from {{ ref('stg_greenery_orders') }} as orders
-    INNER JOIN promos
+    LEFT JOIN promos
     on promos.promo_id = orders.promo_id
 )
 

@@ -29,3 +29,14 @@ from users_bucket
 
 ## Explain the marts models you added. Why did you organize the models in the way you did?
 ### 
+1. I created a user information model, with contact info from addresses and users combined in core. I also created a dimension table for products and a fact table for events, as those will be useful for many different purposes and audiences. I also created the order_items_products table in core, and it reflects how much people spend per order on specific products.  Again, I think there will be general interest in those metrics.
+2. For the marketing directory, I created a model to reflect order information and include an indication of if an order had an associated promo, and how popular that promo was overall.  This could be of use to the marketing team to be able to easily look at which promos were most successful.
+3. For the product directory, I created a model that aggregates session data into it's most usable format, so that the product team can easily see session start and end, how many pages were viewed and how many of each action on our pages occured.  It's very similar to what we were shown during the jumpstart, with some minor modifications.
+4. If I were to do this for a project at my job, I would probably want to start with a better understanding of the business logic we're using and create more transformative and exploratory models.  My DAG is pretty clear and readable right now, but if I were doing this for an organization, I can see how it would very quickly become complex and layered.
+
+## What assumptions are you making about each model? (i.e. why are you adding each test?)
+### I'm largely assuming uniqueness and presence of user ids for all of my user-centered tables, and also ensuring that there are no product ids in orders that were not present in the products model.
+
+## Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
+### All of my tests passed, but I think that over the next week, I'll find that adding more custom tests will highlight flaws in the data or my own personal assumptions.
+

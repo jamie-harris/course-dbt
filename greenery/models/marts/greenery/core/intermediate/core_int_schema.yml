@@ -1,9 +1,9 @@
 version: 2
 
 models:
-  - name: int_user_info.sql
+  - name: int_user_info
     description: Combining users with address information.
 
-  - name: int_order_items_products.sql
+  - name: int_order_items_products
     description: Combining order items with prices from products staging table
 

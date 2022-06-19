@@ -1,8 +1,25 @@
 version: 2
 
 models:
-  - name: dim_user_info.sql
+  - name: dim_user_info
     description: Combining users with address information.
+    columns:
+      - name: user_guid
+        tests:
+        - not_null
+        - unique
 
-  - name: dim_order_items_products.sql
+  - name: dim_order_items_products
     description: Combining order items with prices from products staging table
+    columns:
+      - name: product_id
+        tests:
+        - relationships:
+            to: ref('dim_products')
+            field: product_guid
+
+  - name: dim_products
+    description: Products table, untransformed from staging.
+
+  - name: fct_events
+    description: Events table, untransformed from staging.
