@@ -34,9 +34,12 @@ from users_bucket
 3. For the product directory, I created a model that aggregates session data into it's most usable format, so that the product team can easily see session start and end, how many pages were viewed and how many of each action on our pages occured.  It's very similar to what we were shown during the jumpstart, with some minor modifications.
 4. If I were to do this for a project at my job, I would probably want to start with a better understanding of the business logic we're using and create more transformative and exploratory models.  My DAG is pretty clear and readable right now, but if I were doing this for an organization, I can see how it would very quickly become complex and layered.
 
+# PART 2 (TESTS)
 ## What assumptions are you making about each model? (i.e. why are you adding each test?)
 ### I'm largely assuming uniqueness and presence of user ids for all of my user-centered tables, and also ensuring that there are no product ids in orders that were not present in the products model.
 
 ## Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
 ### All of my tests passed, but I think that over the next week, I'll find that adding more custom tests will highlight flaws in the data or my own personal assumptions.
 
+##  Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
+### I would want to set up orchestration and alerts to ensure that these tests are running with every model run (and would probably use the dbt build command).  
