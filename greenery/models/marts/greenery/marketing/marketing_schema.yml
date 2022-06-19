@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: fct_promo_popularity_orders.sql
+    description: Combining users with address information.

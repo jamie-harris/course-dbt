@@ -27,4 +27,5 @@ from users_bucket
 3. I would want to see if there are any trends between who is taking advantage of our promotions and who is a repeat orderer.  Are certain promos more likely to compel a person to re-order?
 4. Continuing on the exploration of user experience, I'd want to explore delivery time.  Are people who recieve quicker deliveries more or less likely to return?  If we're finding that there's some sweetspot for delivery time that results in returning customers, we can optimize our business model to allow for free shipping for customers with that delivery time, to maximize our customer loyality.
 
-##
+## Explain the marts models you added. Why did you organize the models in the way you did?
+### 

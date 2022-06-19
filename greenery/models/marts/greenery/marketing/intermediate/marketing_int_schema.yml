@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: int_promo_popularity_orders.sql
+    description: Provides a record of how frequently a promo has been used in an order, in addition to all other promo and order information combined.
