@@ -1,5 +1,5 @@
 version: 2
 
 models:
-  - name: fct_session_detail.sql
+  - name: int_session_detail.sql
     description: Provides a record of session outcomes in usable aggregate.

@@ -3,3 +3,6 @@ version: 2
 models:
   - name: dim_user_info.sql
     description: Combining users with address information.
+
+  - name: dim_order_items_products.sql
+    description: Combining order items with prices from products staging table
