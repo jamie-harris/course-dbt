@@ -1,5 +1,9 @@
 version: 2
 
+on-run-end:
+  - "{{% macro grant(reporting) %}}"
+
+
 models:
   - name: stg_greenery_addresses
     description: Location (delivery) information associated with greenery's users (GDPR)
