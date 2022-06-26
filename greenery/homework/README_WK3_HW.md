@@ -66,6 +66,7 @@ ORDER BY 1 DESC
 # PART 2
 ## Create a macro to simplify part of a model(s).
 ### Document the macro(s) using a .yml file in the macros directory.
+### Created a grants macro.
 
 # PART 3
 ## Add a post hook to your project to apply grants to the role “reporting”. Create reporting role first by running CREATE ROLE reporting in your database instance.
@@ -74,6 +75,12 @@ ORDER BY 1 DESC
 
 # PART 4
 ## Install a package (i.e. dbt-utils, dbt-expectations) and apply one or more of the macros to your project
+
+### Applied the privacy macro to mask emails. Now I have a view that allows me to see the user_guid and an email address that only gives me domain information.
+```
+select * from dbt_jamie_h.int_masked_email
+```
+
 
 
 
