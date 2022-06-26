@@ -9,7 +9,9 @@ FROM dbt_jamie_h.fct_session_detail
 
 ```
 
-## What is our conversion rate by product?
+## What is our conversion rate by product? 
+
+### Adding top 3.
 
 | conversion_rate | product_name     |
 |-----------------|------------------|
